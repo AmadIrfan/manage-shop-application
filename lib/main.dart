@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'routes/route_name.dart';
 import 'routes/route_generator.dart';
 
-void main() {
+void main() async{
+
+
+await Firebase.initializeApp(
+    options: DefaultFirebaseOpt ions.currentPlatform,
+);
   runApp(const MyApp());
 }
 
